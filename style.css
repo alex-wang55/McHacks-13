@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #020617;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+}
+
+.main-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.chat-container {
+    width: 500px; /* bigger */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.chat-box {
+    height: 350px;
+    background-color: #1c1e33;
+    border-radius: 8px;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    .chat-box {
+    height: 350px;
+}
+
+}
+
+.message {
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: #001f4d;
+    padding: 8px 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    width: fit-content;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #334bb8;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6a6aff;
+}
+
+#drop-zone {
+    width: 300px;
+    padding: 30px;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#drop-zone:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#drop-zone.dragover {
+    border-color: #4a6cff;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+#file-input {
+    display: none;
+}
+
+
+
+
