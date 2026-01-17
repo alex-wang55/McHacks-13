@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PrepPal Interviewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="main-layout">
+    <div class="chat-container">
+        <h2>PrepPal</h2>
+        
+        <div id="chat-box" class="chat-box"></div>
+
+        <button id="talk-btn">Hold to Speak</button>
+        <p id="status-text">Ready</p>
+    </div>
+
+    <div id="drop-zone">
+        <p>Drag & Drop Your Resume Here</p>
+        <input type="file" id="file-input" accept=".pdf,.doc,.docx">
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
