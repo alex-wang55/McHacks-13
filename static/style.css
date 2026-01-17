@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
     padding: 0;
@@ -78,3 +79,85 @@ button:active {
     text-align: center;
     color: #cbd5e1;
 }
+=======
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #020617;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.chat-container {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-box {
+    height: 300px;
+    background-color: #0f172a;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+}
+
+.message {
+    background-color: #1e293b;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+button:active {
+    background-color: #1d4ed8;
+}
+
+#status-text {
+    text-align: center;
+    margin-top: 10px;
+    color: #94a3b8;
+    font-size: 0.9em;
+}
+
+#drop-zone {
+    width: 250px;
+    padding: 40px;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    text-align: center;
+    color: #cbd5e1;
+}
+>>>>>>> c9a6c9f69360d2ff917f3cc8192fa84ac13fdf7c
