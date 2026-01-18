@@ -41,11 +41,11 @@ def process_audio():
     if 'audio' not in request.files:
         return jsonify({"error": "No audio file provided"}), 400
 
-    # 1. Get raw audio bytes
+    # Get raw audio bytes
     audio_file = request.files['audio']
     audio_bytes = audio_file.read()
     
-    # 2. Send DIRECTLY to Gemini (No transcription needed)
+    # Send to Gemini (No transcription needed)
     user_text_display = "(Audio Message)" 
     
     try:
@@ -58,7 +58,7 @@ def process_audio():
     from google.genai import types
     chat_history.append(types.Content(role="model", parts=[types.Part.from_text(text=ai_text)]))
 
-    # 3. Save to MongoDB (Only if DB is connected)
+    # Save to MongoDB if DB is connected
     if db is not None:
         try:
             db.interviews.insert_one({
@@ -68,7 +68,7 @@ def process_audio():
         except:
             pass # Ignore DB errors
 
-    # 4. Generate Speech
+    # Generate Speech
     audio_response_bytes = generate_speech(ai_text)
     
     if not audio_response_bytes:
@@ -82,7 +82,7 @@ def process_audio():
         "audio_data": audio_base64
     })
 
-# --- IMPORTANT: This block makes the server start ---
+# makes the server start 
 if __name__ == '__main__':
     print("🚀 Starting PrepPal Server...")
     # debug=False is safer for Python 3.14
