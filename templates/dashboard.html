@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepPal AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="logo">PrepPal <span class="accent">AI</span></div>
+            
+            <div class="upload-section">
+                <h3>1. Context</h3>
+                <p>Upload your resume so the AI knows who you are.</p>
+                
+                <input type="file" id="resumeUpload" hidden accept=".pdf">
+                <label for="resumeUpload" class="upload-btn">
+                    <span id="uploadText">📄 Upload Resume</span>
+                </label>
+                <div id="resumeStatus" class="status-indicator hidden">✅ Resume Loaded</div>
+            </div>
+
+            <div class="instructions">
+                <h3>2. Interview</h3>
+                <p>Click the mic, speak your answer, and the AI will respond verbally.</p>
+            </div>
+        </div>
+
+        <div class="chat-area">
+            <div id="chatHistory" class="chat-history">
+                <div class="message ai-message">
+                    Hello! I've read your resume. Tell me about yourself?
+                </div>
+            </div>
+
+            <div class="controls-container">
+                <div id="visualizer" class="visualizer hidden">
+                    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                    <div class="bar"></div><div class="bar"></div>
+                </div>
+
+                <button id="recordBtn" class="record-btn">
+                    <div class="mic-icon">🎙️</div>
+                </button>
+                <p id="statusText">Tap to Speak</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
