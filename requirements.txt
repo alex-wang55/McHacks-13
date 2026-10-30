@@ -1,7 +1,9 @@
 flask
 flask-cors
 pymongo[srv]
+certifi
 python-dotenv
 elevenlabs
 openai
 google-genai
+pypdf
